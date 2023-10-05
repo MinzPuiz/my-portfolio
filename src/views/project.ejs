@@ -1,0 +1,59 @@
+<%- include('partials/header.ejs')  %>
+
+<body>
+    <header>
+        <%- include('partials/navbar.ejs')  %>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="page-header">
+                <h1>My projects</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="/images/gaming_gear.png" alt="TOEIC website" height="250">
+                    </a>
+                    <h4>
+                    <a href="#">Gaming Gear E-commerce Website</a>
+                    </h4>
+                    <p>An e-commerce website built on PHP, MySQL, Bootstrap, HTML and CSS.</p>
+                </div>
+                <div class="col-md-6 portfolio-item">
+                    <a href="https://thingspeak.com/channels/2054166">
+                        <img class="img-responsive" src="/images/iot.png" alt="Portfolio Website" height="250">
+                    </a>
+                    <h4>
+                    <a href="https://thingspeak.com/channels/2054166">IOT intern Project</a>
+                    </h4>
+                    <p>A research project on IOT, Arduino, ESP8266, and AM2302 (DHT22) sensor for measuring environmental temperature and humidity.</p>
+                </div>
+            </div>
+            
+            <!---2nd row---->
+            <div class="row">
+                <div class="col-md-6 portfolio-item">
+                    <a href="https://ayaya-toeic-iuh.click/">
+                        <img class="img-responsive" src="/images/ayaya.png" alt="TOEIC website" height="250">
+                    </a>
+                    <h4>
+                    <a href="https://ayaya-toeic-iuh.click/">Learning TOEIC website</a>
+                    </h4>
+                    <p>An education website built on PHP, MySQL, Bootstrap, HTML and CSS.</p>
+                </div>
+                <div class="col-md-6 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="../images/portfolio.png" alt="Portfolio Website" height="250">
+                    </a>
+                    <h4>
+                    <a href="#">Portfolio Website</a>
+                    </h4>
+                    <p>A Portfolio website built on NodeJS, ExpressJS, EJS, Bootstrap, HTML and CSS.</p>
+                </div>
+            </div>         
+        </div>
+    </main>
+</body>
+
+<%- include('partials/footer.ejs')  %>

@@ -1,0 +1,204 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+} 
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    font-family: 'nixie_oneregular', 'Courier New', Courier, monospace;
+    font-size: 12pt;
+}
+h1{
+    font-size: 22pt;
+}
+
+h2{
+    font-size: 20pt;
+}
+
+.panel {
+			background-color: rgba(255, 255, 255, 0.7);
+}
+        
+.row {
+    margin-bottom: 70px;
+}
+
+.main > .container {
+    padding-top: 70px;
+}
+
+/*Scroll bar*/
+/* Set the style for the entire scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Set the style for the thumb (the moving part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf;
+    border-radius: 10px;
+  }
+  
+  /* Set the style for the track (the area behind the thumb) */
+  ::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+
+/* Index page */
+.panel .text-vertical-center {
+    /*margin-top: 200px;*/
+    margin: 150px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.full {
+    background: url("/images/business.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Custom Button Styles on Index Page */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Custom Horizontal Rule */
+hr.small {
+    max-width: 100px;
+}
+
+/* Portfolio page */
+.row > .portfolio-item > h4 {
+    margin-top: 50px;
+}
+
+.row > .text-center {
+    margin-bottom: 30px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    background-color: transparent;
+    font-size: 10pt;
+  }
+  
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#scroll-up-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20%;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#scroll-up-btn:hover {
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none;
+}
+
+li{
+    display: inline-block;
+    margin: 10px;
+}
+
+#minz{
+    border-radius: 40%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333; 
+    background-color: #f8f9fa; /* change the background color on hover */
+}
+
+.navbar-nav .nav-link{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*contact and send e-mail*/
+#khung{
+    border: 1px solid black;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+#send_style{
+    background-color: rgba(255, 192, 203, 0.489);
+    padding-bottom: 15px;
+}
+#contact_style{
+    background-color: rgba(245, 245, 245, 0.61);
+}
+#send{
+    height: auto;
+    
+}
+
+#contact{
+    height: auto;
+    
+}
+
+#send > h2{
+    font-weight: bolder;
+    text-align: center;
+}
+
+#contact > h2{
+    font-weight: bolder;
+    text-align: center;
+}

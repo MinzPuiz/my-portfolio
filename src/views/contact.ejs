@@ -1,0 +1,125 @@
+<%- include('partials/header.ejs') %>
+
+    <style>
+        body{
+            background: url("/images/natural.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        label {
+            font-weight: bold;
+        }
+        #my-button {
+            font-weight: bold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            transition: all 0.2s ease-in-out;
+        }
+        i.fa {
+            font-size: 1.5em;
+        }
+        #my-button:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+        li > a{
+            color: black;
+        }
+        li > a:hover{
+            color: #FFA726;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        i.fa-brands{
+            font-size: 1.5em;
+        }
+        #social{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <body>
+        <header>
+            <%- include('partials/navbar.ejs') %>
+        </header>
+        <main class="main">
+            <div class="container">
+                <div id="khung" class="row">
+                    <div id="send_style" class="col-md-7 mx-auto">
+                        <div id="send">
+                            <h2>Send me an e-mail</h2>
+                            <form action="/contact" method="post">
+                                <div class="form-group">
+                                    <i class="fa-solid fa-user"></i>
+                                    <label for="urname">Your name: </label>
+                                    <input type="text" class="form-control" name="name" id="urname"
+                                        placeholder="type your name">
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <label for="e-mail">E-mail: </label>
+                                    <input type="email" class="form-control" name="email" id="e-mail"
+                                        placeholder="Fill your e-mail">
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                    <label for="subject">Subject: </label>
+                                    <input type="subject" class="form-control" name="subject" id="subject"
+                                        placeholder="subject">
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa-solid fa-message"></i>
+                                    <label for="message">Your message: </label>
+                                    <textarea class="form-control" name="message" id="message" rows="5"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-center pd-5">
+                                    <button type="submit" id="my-button" class="btn btn-primary rounded-pill mx-auto"
+                                        style="background: linear-gradient(to right, #FFD54F, #FFA726);"><i
+                                            class="fa-solid fa-paper-plane"></i> Submit</button>
+                                </div>
+                            </form>
+                            <script>
+                                $.ajax({
+                                type: "POST",
+                                url: "/contact",
+                                data: data,
+                                success: function(response) {
+                                    alert(response);
+                                    window.location.href = "../views/about.ejs";
+                                }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div id="contact_style" class="col-md-5 mx-auto">
+                        <div id="contact">
+                            <h2>Contact me</h2>                            
+                            <ul style="padding-left: 50px;">
+                                <li><i style="font-size: 1.5em;" class="fa-solid fa-location-dot"></i> <b>Address:</b> <a href="#"><i>Thu Duc district</i></a></li>
+                                <li><i class="fa fa-mobile-phone" aria-hidden="true"></i> <b>Mobile:</b> <a href="#"><i>(+84)39997xxxx</i></a></li>
+                                <li><i class="fa fa-paper-plane" aria-hidden="true"></i> <b>E-mail 1:</b> <a href="mailto:jokerparttime@gmail.com"><i>jokerparttime@gmail.com</i></a></li>
+                                <li><i class="fa fa-paper-plane" aria-hidden="true"></i> <b>E-mail 2:</b> <a href="mailto: minhbui152@gmail.com"><i>minhbui152@gmail.com</i></a></li>
+                            </ul><hr><br>
+                            <h2>My Social network</h2>
+                            <p><br></p>
+                            <span id="social">
+                                <a href="#" class="fb"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-spotify"></i></a>   
+                                <a href="#"><i class="fa-brands fa-steam"></i></a>      
+                                <a href="#"><i class="fa-brands fa-github"></i></a>                     
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <%- include('partials/footer.ejs') %>
